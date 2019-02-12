@@ -16,3 +16,9 @@ curl -Lso- https://raw.githubusercontent.com/uncelvel/scripts/master/Utilities/c
 ```sh 
 curl -Lso- https://raw.githubusercontent.com/uncelvel/scripts/master/Utilities/bench_vm.sh | bash
 ```
+
+
+## Force Update time for Linux 
+```sh 
+sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+```
